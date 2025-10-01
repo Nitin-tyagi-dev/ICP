@@ -8,14 +8,14 @@ class Solution {
             arr[s.charAt(r) - 'A']++;
             maxfreq = Math.max(maxfreq , arr[s.charAt(r) - 'A']);
 
-            if((r - l + 1) - maxfreq > k){
+            while((r - l + 1) - maxfreq > k){
                 arr[s.charAt(l) - 'A']--;
                 l++;
             }
 
-            if((r - l + 1) - maxfreq <= k ){
-                maxlen = Math.max(maxlen , r - l + 1);
-            }
+            
+            maxlen = Math.max(maxlen , r - l + 1);
+            
             r++;
         }
 
