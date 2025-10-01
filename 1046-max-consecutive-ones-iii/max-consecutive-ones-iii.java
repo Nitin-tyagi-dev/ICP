@@ -8,16 +8,14 @@ class Solution {
                 zero++;
             }
 
-            if(zero > k ){
+            while(zero > k ){
                 if(nums[l] == 0){
                     zero--;
                 }
                 l++;
             }
 
-            if(zero <= k){
-                max = Math.max(max , r - l + 1);
-            }
+            max = Math.max(max , r - l + 1);
             r++;
         }
 
